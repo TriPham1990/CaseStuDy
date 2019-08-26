@@ -94,7 +94,15 @@ function drawScore() {
     context.fillText('Score : '+userScore,10,35 );
     context.closePath();
 }
-
+//
+// hướng dẫn chơi Game :
+function guideGame() {
+    context.beginPath();
+    context.font = '15pt Calibri';
+    context.fillStyle = 'black';
+    context.fillText('Hướng dẫn chơi game : bấm và giữ phím space để xây cầu , thả phím space để hạ cầu.',350,30 );
+    context.closePath();
+}
 //xử lí kết thúc game:
 function isHandGameOver() {
     if (ninja.y + ninja.height >= canvas.height) {
@@ -138,6 +146,7 @@ function start() {
     drawPedestal(pedestalTwo);
     drawLine();
     drawScore();
+    guideGame();
     isHandUpdateLine();
     isHandToDumpLine();
     isHandGameOver();
